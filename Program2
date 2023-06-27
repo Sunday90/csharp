@@ -1,0 +1,43 @@
+using System;
+
+namespace csharp.ru {
+public class Program {
+
+public static void Main(string[] args) {
+
+Console.WriteLine(method1(5, 6));
+Console.WriteLine(method2(123));
+method3();
+
+}
+
+public static double method1(int a, int b) {
+    int c = a;
+    for(int i=0;i<b;i++) {
+        a *= c;
+    }
+
+    return a;
+}
+
+public static int method2(int a) {
+    String str = a.ToString();
+    int summ = 0;
+
+    for (int i=0;i<str.Length;i++) {
+        summ += Int32.Parse(str[i].ToString());
+    }
+
+    return summ;
+}
+
+public static void method3() {
+    int[] array = new int[10];
+    for (int i=0; i< 10; i++) {
+        array[i] = i*5;
+        Console.Write(array[i] + " ");
+    }
+}
+
+}
+}
